@@ -1,0 +1,92 @@
+{
+    "tahun": "2026",
+    "judul": "Transparansi APBN & Dana Desa",
+    "deskripsi": "Informasi transparansi penggunaan APBN dan Dana Desa Nagari Koto Kaciak Barat Tahun Anggaran 2026. Data ini disajikan secara terbuka kepada seluruh warga nagari sebagai wujud komitmen pemerintahan yang bersih, transparan, dan akuntabel.",
+    "total_anggaran": 1250000000,
+    "total_realisasi": 986000000,
+    "sumber_dana": [
+        { "nama": "Dana Desa (DD)", "anggaran": 750000000, "realisasi": 612000000 },
+        { "nama": "Alokasi Dana Nagari (ADN)", "anggaran": 350000000, "realisasi": 274000000 },
+        { "nama": "Pendapatan Asli Nagari (PADesa)", "anggaran": 150000000, "realisasi": 100000000 }
+    ],
+    "bidang": [
+        { "nama": "Bidang Penyelenggaraan Pemerintahan", "anggaran": 180000000, "realisasi": 172000000 },
+        { "nama": "Bidang Pelaksanaan Pembangunan", "anggaran": 520000000, "realisasi": 401000000 },
+        { "nama": "Bidang Pembinaan Kemasyarakatan", "anggaran": 150000000, "realisasi": 118000000 },
+        { "nama": "Bidang Pemberdayaan Masyarakat", "anggaran": 250000000, "realisasi": 205000000 },
+        { "nama": "Bidang Penanggulangan Bencana & Darurat", "anggaran": 150000000, "realisasi": 90000000 }
+    ],
+    "program": [
+        {
+            "nama": "Pembangunan/Peningkatan Jalan Nagari",
+            "bidang": "Pelaksanaan Pembangunan",
+            "anggaran": 250000000,
+            "realisasi": 228000000,
+            "status": "Selesai",
+            "keterangan": "Pengerasan jalan pertanian sepanjang 1.200 meter di Jorong Parik Gadang dan Lungguk Batu."
+        },
+        {
+            "nama": "Rehabilitasi Saluran Irigasi",
+            "bidang": "Pelaksanaan Pembangunan",
+            "anggaran": 150000000,
+            "realisasi": 91000000,
+            "status": "Berjalan",
+            "keterangan": "Normalisasi dan perbaikan saluran irigasi sawah di Jorong Batu Hampar."
+        },
+        {
+            "nama": "Pembangunan Gedung Serbaguna (Balai)",
+            "bidang": "Pelaksanaan Pembangunan",
+            "anggaran": 120000000,
+            "realisasi": 82000000,
+            "status": "Berjalan",
+            "keterangan": "Pembangunan balai serbaguna untuk kegiatan kemasyarakatan dan musyawarah nagari."
+        },
+        {
+            "nama": "Pelatihan & Pemberdayaan UMKM",
+            "bidang": "Pemberdayaan Masyarakat",
+            "anggaran": 80000000,
+            "realisasi": 74000000,
+            "status": "Selesai",
+            "keterangan": "Pelatihan pemasaran digital dan bantuan modal usaha bagi pelaku UMKM nagari."
+        },
+        {
+            "nama": "BLT Dana Desa (Bantuan Langsung Tunai)",
+            "bidang": "Penanggulangan Bencana & Darurat",
+            "anggaran": 90000000,
+            "realisasi": 90000000,
+            "status": "Selesai",
+            "keterangan": "Penyaluran bantuan langsung tunai kepada 30 keluarga penerima manfaat."
+        },
+        {
+            "nama": "Operasional Perangkat Nagari",
+            "bidang": "Penyelenggaraan Pemerintahan",
+            "anggaran": 80000000,
+            "realisasi": 78000000,
+            "status": "Selesai",
+            "keterangan": "Pengoperasian kantor nagari, honor perangkat, dan administrasi pemerintahan."
+        },
+        {
+            "nama": "Penyelenggaraan Kegiatan Keagamaan & Sosial",
+            "bidang": "Pembinaan Kemasyarakatan",
+            "anggaran": 70000000,
+            "realisasi": 62000000,
+            "status": "Berjalan",
+            "keterangan": "Bantuan kegiatan keagamaan, santunan anak yatim, dan kegiatan sosial kemasyarakatan."
+        },
+        {
+            "nama": "Pengadaan Sarana Air Bersih",
+            "bidang": "Pelaksanaan Pembangunan",
+            "anggaran": 70000000,
+            "realisasi": 45000000,
+            "status": "Berjalan",
+            "keterangan": "Pembangunan dan perbaikan sarana air bersih untuk kebutuhan warga di beberapa jorong."
+        }
+    ],
+    "jorong": [
+        { "nama": "Jorong Parik Gadang", "anggaran": 320000000, "realisasi": 265000000 },
+        { "nama": "Jorong Lungguk Batu", "anggaran": 310000000, "realisasi": 244000000 },
+        { "nama": "Jorong Kampung Hangus", "anggaran": 290000000, "realisasi": 238000000 },
+        { "nama": "Jorong Batu Hampar", "anggaran": 330000000, "realisasi": 239000000 }
+    ]
+}
+

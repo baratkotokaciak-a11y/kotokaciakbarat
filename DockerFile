@@ -1,0 +1,40 @@
+FROM php:8.2-fpm
+
+# 1. Install system dependencies & SQLite extension
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    zip \
+    unzip \
+    git \
+    nginx \
+    sqlite3 \
+    libsqlite3-dev
+
+# 2. Install PHP extensions yang dibutuhkan Laravel
+RUN docker-php-ext-install pdo pdo_sqlite gd
+
+# 3. Set direktori kerja
+WORKDIR /var/www/html
+
+# 4. Copy seluruh source code project ke dalam container
+COPY . .
+
+# 5. Salin konfig Nginx bawaan jika ada, atau pastikan Nginx terhubung ke Laravel
+COPY nginx.conf /etc/nginx/sites-available/default
+
+# 6. Buat file database SQLite dan set permission folder
+RUN touch database/database.sqlite
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
+
+# 7. Install Composer & dependensi Laravel
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN composer install --no-dev --optimize-autoloader
+
+# 8. Expose port 80 untuk web server
+EXPOSE 80
+
+# 9. Jalankan Nginx dan PHP-FPM secara bersamaan
+CMD service nginx start && php-fpm
