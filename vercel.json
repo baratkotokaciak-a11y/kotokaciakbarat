@@ -1,7 +1,6 @@
 {
     "version": 2,
     "framework": null,
-    "buildCommand": "",
     "outputDirectory": "public",
     "functions": {
         "api/index.php": {
@@ -11,7 +10,7 @@
     "routes": [
         {
             "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "dest": "/build/$1"
         },
         {
             "src": "/(.*)",
