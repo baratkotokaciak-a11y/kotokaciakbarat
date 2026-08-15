@@ -8,6 +8,7 @@ $storageFolders = [
     '/tmp/storage/framework/sessions',
     '/tmp/storage/logs',
     '/tmp/bootstrap/cache',
+    '/tmp/database',
 ];
 
 foreach ($storageFolders as $folder) {
@@ -16,7 +17,20 @@ foreach ($storageFolders as $folder) {
     }
 }
 
-// 2. Set Environment variable untuk lokasi compiled views & bootstrap cache
+// 2. Salin database.sqlite dari repositori ke /tmp/database/
+$sourceSqlite = __DIR__ . '/../database/database.sqlite';
+$targetSqlite = '/tmp/database/database.sqlite';
+
+if (file_exists($sourceSqlite)) {
+    copy($sourceSqlite, $targetSqlite);
+} else {
+    touch($targetSqlite);
+}
+
+// 3. Paksa Laravel menggunakan database dari /tmp
+putenv("DB_DATABASE={$targetSqlite}");
+$_ENV['DB_DATABASE'] = $targetSqlite;
+
 putenv('VIEW_COMPILED_PATH=/tmp/storage/framework/views');
 $_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
 
@@ -32,5 +46,5 @@ $_ENV['APP_CONFIG_CACHE'] = '/tmp/bootstrap/cache/config.php';
 putenv('APP_ROUTES_CACHE=/tmp/bootstrap/cache/routes.php');
 $_ENV['APP_ROUTES_CACHE'] = '/tmp/bootstrap/cache/routes.php';
 
-// 3. Load aplikasi Laravel bawaan
+// 4. Bootstrapping Laravel
 require __DIR__ . '/../public/index.php';
