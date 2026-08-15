@@ -7,8 +7,7 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/js/app.js',
-                'resources/js/mobile_interactions.js' // <-- TAMBAHKAN BARIS INI
+                'resources/js/app.js'
             ],
             refresh: true,
         }),

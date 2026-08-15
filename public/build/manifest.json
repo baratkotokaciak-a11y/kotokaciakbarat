@@ -9,15 +9,9 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-CIomGrQN.js",
+    "file": "assets/app-Be2YaOYJ.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
-  },
-  "resources/js/mobile_interactions.js": {
-    "file": "assets/mobile_interactions-C3mQoEKn.js",
-    "name": "mobile_interactions",
-    "src": "resources/js/mobile_interactions.js",
     "isEntry": true
   }
 }
